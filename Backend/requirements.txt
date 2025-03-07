@@ -1,0 +1,8 @@
+pynput==1.7.6
+cryptography==41.0.7
+fastapi==0.109.0
+uvicorn==0.27.0
+requests==2.31.0
+pyobjc-framework-Cocoa==9.2.0  # For macOS window tracking
+pywin32==306  # For Windows-specific features
+python-dotenv==1.0.0 

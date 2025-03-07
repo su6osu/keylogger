@@ -1,0 +1,22 @@
+{
+  /* Visit https://firebase.google.com/docs/database/security to learn more about security rules. */
+  "rules": {
+    "keylog": {
+      "$deviceId": {
+        ".read": "auth != null && auth.uid === $deviceId",
+        ".write": "auth != null && auth.uid === $deviceId",
+        "keystroke": {
+          ".validate": "newData.hasChildren(['timestamp', 'keystroke', 'app'])"
+        },
+        "activeApps": {
+          ".validate": "newData.hasChildren(['timestamp', 'activeApp'])"
+        },
+        "clipboard": {
+          ".validate": "newData.hasChildren(['timestamp', 'clipboardText'])"
+        }
+      }
+    },
+    ".read": false,
+    ".write": false
+  }
+}
